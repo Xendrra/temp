@@ -1,0 +1,18 @@
+Basictask=function(r,c){ 
+  MA=matrix(sample(-100:100,r*c),r,c)
+  MB=matrix(sample(-100:100,r*c),r,c)
+  radky=vector()
+  sloupce=vector()
+  for (i in 1:r){
+    radky[i]=sum(MA[i,1:c])
+  }
+  for (i in 1:c){ 
+    sloupce[i]=sum(MB[1:r,i])
+  }
+  print(radky)
+  print(sloupce)
+vektor=c(radky,sloupce)
+print(vektor)
+vektor = vektor[!vektor <=0]
+print(vektor)
+  } 
